@@ -33,7 +33,7 @@ module.exports = function(config) {
 
     autoWatch: false,
     browsers: ['Chrome'],
-    singleRun: true,
+    singleRun: false,
     concurrency: Infinity,
   });
 };
