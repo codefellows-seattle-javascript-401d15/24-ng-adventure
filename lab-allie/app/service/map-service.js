@@ -8,45 +8,45 @@ require('angular')
   let service = {};
   
   service.mapData = {
-    room1: {
-      description: 'You are in room 1',
-      down:'room2',
+    garden: {
+      description: 'You are in the Garden',
+      down:'courtyard',
     },
-    room2: {
-      description: 'You are in room 2',
-      up:'room1',
-      right: 'room3',
+    courtyard: {
+      description: 'You are in the Courtyard',
+      up:'garden',
+      right: 'fountain',
     },
-    room3: {
-      description: 'You are in room 3',
-      left: 'room2',
-      right: 'room5',
-      down: 'room4',
+    fountain: {
+      description: 'You are next to the Fountain',
+      left: 'courtyard',
+      right: 'livingRoom',
+      down: 'entryway',
     },
-    room4: {
-      description: 'You are in room 4',
-      up: 'room3',
-      right: 'room6',
+    entryway: {
+      description: 'You are in the Entryway',
+      up: 'fountain',
+      right: 'kitchen',
     },
-    room5: {
-      description: 'You are in room 5',
-      left:'room3',
-      right: 'room8',
-      down: 'room6',
+    livingRoom: {
+      description: 'You are in the Living Room',
+      left:'rountain',
+      right: 'backPatio',
+      down: 'kitchen',
     },
-    room6: {
-      description: 'You are in room 6',
-      up:'room5',
-      left: 'room4',
+    kitchen: {
+      description: 'You are in the Kitchen',
+      up:'livingRoom',
+      left: 'entryway',
     },
-    room7: {
-      description: 'You are in room 7',
-      down: 'room8',
+    den: {
+      description: 'You are in the Den',
+      down: 'backPatio',
     },
-    room8: {
-      description: 'You are in room 8',
-      up:'room7',
-      left: 'room5',
+    backPatio: {
+      description: 'You are on the Back Patio',
+      up:'den',
+      left: 'livingRoom',
     },
   };
   

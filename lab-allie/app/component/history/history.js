@@ -12,6 +12,6 @@ require('angular')
     
     this.history = playerService.history;
 
-    this.errorMessage = this.history[this.history.length - 1].description;
+    // this.errorMessage = this.history[this.history.length - 1].description;
   }],
 });

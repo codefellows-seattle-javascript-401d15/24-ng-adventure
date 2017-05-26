@@ -11,8 +11,8 @@ require('angular')
   
   let player = service.player = {
     name: 'Player 1',
-    location: 'room1',
-    description: 'You are in room 1',
+    location: 'garden',
+    description: 'You are in the Garden',
     points: 100,
   };
   
@@ -20,7 +20,7 @@ require('angular')
     {
       turn,
       description: 'Welcome to ngAdventure!',
-      location: 'room1',
+      location: 'Garden',
       points: player.points,
     },
   ];
