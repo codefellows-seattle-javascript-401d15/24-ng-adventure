@@ -4,8 +4,8 @@
 For this lab we wrote a text based adventure game to help learn directives and services.
 
 For more information see:
-* [Class 24]()
-* [Lab 24]()
+* [Class 24](https://github.com/codefellows/seattle-javascript-401d15/tree/master/class-24-ng-adventure)
+* [Lab 24](https://github.com/codefellows-seattle-javascript-401d15/24-ng-adventure)
 
 ## Version
 * 0.1.0
@@ -30,7 +30,13 @@ Initializing package.json
 ```
 npm init
 
-npm install -S angular babel-core babel-loader babel-preset-es2015 css-loader extract-text-webpack-plugin file-loader html-loader html-webpack-plugin node-sass resolve-url-loader sass-loader style-loader url-loader webpack
+npm install -S angular babel-core
+babel-loader babel-preset-es2015
+css-loader extract-text-webpack-plugin
+file-loader html-loader
+html-webpack-plugin node-sass
+resolve-url-loader sass-loader
+style-loader url-loader webpack
 
 npm install -D webpack-web-server
 ```
@@ -104,10 +110,13 @@ In [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Terminal) enter the 
 karma start
 
 ## Resources
-*
+* [A Practical Guide to AngularJS Directives](https://www.sitepoint.com/practical-guide-angularjs-directives/)
+* [Mastering AngularJS Directives](https://code.tutsplus.com/tutorials/mastering-angularjs-directives--cms-22511
+)
+* [Factory vs Service vs Provider](https://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mmpadget) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mmpadget/24-ng-adventure/blob/lab-24/lab-padget/LICENSE) file for details.
 
 ## Acknowledgments
 * Code Fellows
