@@ -19,7 +19,7 @@ require('angular')
     {
       turn,
       description: 'Welcome to ngAdventure!',
-      location: 'cabin',
+      location: 'room1',
       points: player.points,
     },
   ];
