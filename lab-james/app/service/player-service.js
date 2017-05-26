@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 require('angular')
 .module('ngAdventure')
@@ -16,7 +16,7 @@ require('angular')
   let history = service.history = [
     {
       turn,
-      desc: 'welcome to ngAdventure',
+      desc: 'Welcome to ngAdventure! In this game, you are an anonymous adventurer in a fantasy world looking to defeat the evil overlord said to reside in these parts.',
       location: 'cabin',
       hp: player.hp,
     },

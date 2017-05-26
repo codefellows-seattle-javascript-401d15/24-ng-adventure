@@ -1,0 +1,8 @@
+<section>
+  <h2>Player History</h2>
+  <ul ng-repeat="history in playerHistoryCtrl.history" value="history">
+    <li>Turn {{ history.turn }}</li>
+    <li>Location: {{ history.location }}</li>
+    <li>Description: {{ history.desc }}</li>
+  </ul>
+</section>

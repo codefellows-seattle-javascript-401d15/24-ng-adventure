@@ -8,11 +8,12 @@ require('angular')
   let service = {};
 
   service.mapData = {
-    cabin: {
-      desc: 'message from cabin',
-      south: 'trail',
+    camp: {
+      desc: 'You are standing in a camp that looks to have been used for a few days already. It sits up against a cliff face to the North. To the South, you see a path through a thick forest, but do not see where it ends. To the East you see where you traveled from having followed the edge of the forest. To the West, you notice the glint of water from what appears to be a lake far in the distance.',
+      south: 'forestPath',
+      west: 'lake',
     },
-    trail: {
+    forestPath: {
       desc: 'message from trail',
       north: 'cabin',
       east: 'gate',

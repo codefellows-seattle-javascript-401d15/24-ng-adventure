@@ -42,6 +42,10 @@ module.exports = {
         test: /\.(eot|woff|ttf|svg).*/,
         loader: 'url?limit=10000&name=fonts/[hash].[ext]',
       },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
+      },
     ],
   },
 };
