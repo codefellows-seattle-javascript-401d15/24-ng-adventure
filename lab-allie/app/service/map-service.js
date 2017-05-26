@@ -8,8 +8,17 @@ require('angular')
   let service = {};
   
   service.mapData = {
-    room1
-  }
+    cabin: {
+      description: 'Message from cabin',
+      south: 'trail',
+    },
+    trail: {
+      description: 'Message from trail',
+      north: 'cabin',
+      east: 'gate', 
+      south: 'pit',
+    },
+  };
   
-  
-}])
+  return service;
+}]);
