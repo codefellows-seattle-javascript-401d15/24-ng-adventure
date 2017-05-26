@@ -4,7 +4,7 @@
   "description": "lab 24 JS401",
   "main": "entry.js",
   "scripts": {
-    "test": "test"
+    "watch": "webpack-dev-server --inline --hot",
   },
   "repository": {
     "type": "git",
