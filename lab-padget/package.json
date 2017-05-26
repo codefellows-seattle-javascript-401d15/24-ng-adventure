@@ -1,0 +1,21 @@
+{
+  "name": "lab-padget",
+  "version": "0.1.0",
+  "description": "Lab 24",
+  "main": "entry.js",
+  "scripts": {
+    "test": "karma start",
+    "watch": "webpack-dev-server --inline --hot",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmpadget/24-ng-adventure/"
+  },
+  "keywords": [
+    "lab",
+    "24"
+  ],
+  "author": "Michael",
+  "license": "MIT"
+}

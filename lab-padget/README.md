@@ -44,8 +44,9 @@ npm install -D webpack-web-server
 Add the following to package.json:
 ```
 "scripts": {
-  "watch": "webpack-dev-server --inline --hot"
-  "build": "webpack",
+  "test": "karma start",
+  "watch": "webpack-dev-server --inline --hot",
+  "build": "webpack"
 }
 ```
 
@@ -108,6 +109,7 @@ Do you want Karma to watch all the files and run the tests on change ?
 In [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Terminal) enter the command:
 
 karma start
+npm run test
 
 ## Resources
 * [A Practical Guide to AngularJS Directives](https://www.sitepoint.com/practical-guide-angularjs-directives/)
