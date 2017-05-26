@@ -12,6 +12,7 @@ require('angular')
   let player = service.player = {
     name: 'Player 1',
     location: 'room1',
+    description: 'You are in room 1',
     points: 100,
   };
   
@@ -30,13 +31,15 @@ require('angular')
       
       let current = player.location;
       
+      // let roomDescription = player.description;
+      
       let newLocation = mapService.mapData[current][direction];
       
       if(!newLocation) {
         history.shift();
         history.unshift({
           turn, 
-          description: 'You cannot move in that direction',
+          description: 'You cannot move that direction',
           location: player.location,
           previousLocation: history[0].location,
           points: --player.points,
@@ -48,7 +51,8 @@ require('angular')
         turn,
         location: newLocation,
         previousLocation: current,
-        decription: mapService.mapData[newLocation].description,
+        // description: roomDescription,
+        description: mapService.mapData[newLocation].description,
         points: ++player.points,
       });
       

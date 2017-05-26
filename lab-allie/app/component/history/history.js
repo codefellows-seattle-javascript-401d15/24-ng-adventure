@@ -11,7 +11,7 @@ require('angular')
     $log.debug('#player-info controller');
     
     this.history = playerService.history;
-    $log.log('player history', this.history);
 
+    this.errorMessage = this.history[this.history.length - 1].description;
   }],
 });
