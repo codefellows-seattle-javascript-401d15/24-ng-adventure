@@ -9,7 +9,7 @@ require('angular')
   let turn = 0;
   let player = service.player = {
     name: 'David',
-    location: 'cabin',
+    location: 'dark room',
     hp: 25,
   };
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const HTMLPlugin = ('html-text-webpack-plugin');
+const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const plugins = [

@@ -38,7 +38,7 @@ body {
   @include margin
   font-family: 'Indie Flower', cursive;
   font-size: $font-size-primary;
-  background: linear-gradient(to bottom, $brand-secondary, $brand-primary);
+  background: linear-gradient($brand-secondary, $brand-primary);
 }
 
 h2 {

@@ -6,15 +6,19 @@ require('angular')
 .module('ngAdventure')
 .component('gamePad', {
   template: require('./game-pad.html'),
-  controllerAs: 'gamepadCtrl',
+  controllerAs: 'gamePadCtrl',
   controller: ['$log', 'playerService', function($log, playerService) {
-    $log.debug('#gamepadCtrl');
+    $log.debug('#gamePadCtrl');
 
     this.directions = ['north', 'south', 'east', 'west'];
     this.moveDirection = this.directions[0];
 
     this.movePlayer = function() {
-      playerService.movePlayer(this.moveDirection);
+      playerService.movePlayer(this.moveDirection)
+      .then(location => {
+        $log.log(`player currently at: ${location}`);
+      })
+      .catch($log.error);
     };
   }],
 });

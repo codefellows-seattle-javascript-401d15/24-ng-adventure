@@ -37,9 +37,9 @@ require('angular')
     'great hall': {
       desc: 'You enter a great hall.  There is a throne to the south, and exits to the east, north and west.',
       north: 'fountains',
-      east: 'portraits',
-      south: 'great throne',
-      west: 'chamber',
+      east: 'chamber',
+      south: 'vault hall',
+      west: 'portraits',
     },
     chamber: {
       desc: 'You smell something fowl.  There\'s a draft here, but it is not enough to cut the stench of an unattended chamber-pot... ',
