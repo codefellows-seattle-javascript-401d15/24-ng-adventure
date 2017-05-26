@@ -1,19 +1,19 @@
 'use strict'
 
 const HTMLPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extrace-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const plugins = [
   new HTMLPlugin({template: `${__dirname}/app/index.html`}),
   new ExtractTextPlugin('bundle.css')
 ]
 
-modulue.exports = {
+module.exports = {
   entry: `${__dirname}/app/entry.js`,
   output: {
     filename: 'bundle.js',
     path: `${__dirname}/build`
-  }.
+  },
   plugins,
   devtool: 'source-map',
   module: {
