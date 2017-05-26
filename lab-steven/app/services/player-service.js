@@ -3,21 +3,21 @@
 require('angular')
 .module('ngAdventure')
 .factory('playerService', ['$q', '$log', 'mapService', function($q, $log, mapService){
-  $log.debug('PlayerService');
+  $log.debug('playerService');
 
   let service = {};
   let turn = 0;
   let player = service.player = {
     name: 'player 1',
-    location: 'cabin',
-    hp: 3,
+    location: 'town',
+    hp: 8,
   };
 
   let history = service.history = [
     {
       turn,
       desc: 'Welcome to ngAdventure',
-      location: 'cabin',
+      location: 'town',
       hp: player.hp,
     },
   ];
@@ -32,7 +32,7 @@ require('angular')
       if (!newLocation) {
         history.unshift({
           turn,
-          desc: 'you ran into a wall',
+          desc: 'You step into the void, and lose 1 hp after wandering aimlessly',
           location: player.location,
           hp: --player.hp,
         });
@@ -43,7 +43,7 @@ require('angular')
         turn,
         location: player.location,
         desc: mapService.mapData[newLocation].desc,
-        hp: ++player.hp,
+        hp: player.hp,
       });
 
       player.location = newLocation;
