@@ -30,15 +30,9 @@ Initializing package.json
 ```
 npm init
 
-npm install -S angular babel-core
-babel-loader babel-preset-es2015
-css-loader extract-text-webpack-plugin
-file-loader html-loader
-html-webpack-plugin node-sass
-resolve-url-loader sass-loader
-style-loader url-loader webpack
+npm install -S angular babel-core babel-loader babel-preset-es2015 css-loader extract-text-webpack-plugin file-loader html-loader html-webpack-plugin node-sass resolve-url-loader sass-loader style-loader url-loader webpack
 
-npm install -D webpack-web-server
+npm install -D webpack-dev-server
 ```
 
 Add the following to package.json:
