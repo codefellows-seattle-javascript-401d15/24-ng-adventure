@@ -1,6 +1,6 @@
 'use strict';
 
-require('./_player-info.scss');
+// require('./_player-info.scss');
 
 require('angular')
 .module('ngAdventure')
@@ -11,5 +11,5 @@ require('angular')
     $log.debug('#player-info controller');
     
     this.player = playerService.player;
-  }]
-})
+  }],
+});

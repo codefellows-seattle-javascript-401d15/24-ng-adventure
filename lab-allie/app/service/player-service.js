@@ -2,7 +2,7 @@
 
 require('angular')
 .module('ngAdventure')
-.factory('playerService', ['$q', '$log', 'mapService', function($q, $log, mapservice) {
+.factory('playerService', ['$q', '$log', 'mapService', function($q, $log, mapService) {
   $log.debug('Player Service');
   
   let service = {};
@@ -10,9 +10,9 @@ require('angular')
   let turn = 0;
   
   let player = service.player = {
-    name:
-    location:
-    points:
+    name: 'Player 1',
+    location: 'room1',
+    points: 100,
   };
   
   let history = service.history = [
@@ -20,9 +20,9 @@ require('angular')
       turn,
       description: 'Welcome to ngAdventure!',
       location: 'cabin',
-      points: player.points
-    }
-  ]
+      points: player.points,
+    },
+  ];
   
   service.movePlayer = function(direction) {
     return new $q((resolve, reject) => {
@@ -37,21 +37,21 @@ require('angular')
           turn, 
           description: 'You cannot move in that direction',
           location: player.location,
-          points: --player.points
-        })
-        return reject('You cannot move in that direction')
+          points: --player.points,
+        });
+        return reject('You cannot move in that direction');
       }
       
       history.unshift({
         turn,
         location: player.location,
         decription: mapService.mapData[newLocation].description,
-        points: ++player.points
-      })
+        points: ++player.points,
+      });
       
-      player.location = newLocation
-      return resolve(player.location)
-    })
-  }
+      player.location = newLocation;
+      return resolve(player.location);
+    });
+  };
   return service;
-}])
+}]);

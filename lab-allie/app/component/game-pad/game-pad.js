@@ -1,6 +1,6 @@
 'use strict';
 
-require('./_game-pad.scss');
+// require('./_game-pad.scss');
 
 require('angular')
 .module('ngAdventure')
@@ -17,9 +17,9 @@ require('angular')
     this.movePlayer = function() {
       playerService.movePlayer(this.moveDirection)
       .then(location => {
-        $log.log(`Player is currently at: ${location}`)
+        $log.log(`Player is currently at: ${location}`);
       })
-      .catch($log.error)
-    }
-  }]
+      .catch($log.error);
+    };
+  }],
 });
