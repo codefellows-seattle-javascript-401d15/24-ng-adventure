@@ -33,7 +33,7 @@ require('angular')
       south: 'unpaidParkingTickets'
     },
     unpaidParkingTickets: {
-      desc: 'This room holds everything from Bruce Springsteen trivia, to ghost stories, to recipes from my grandma, to unpaid parking tickets.',
+      desc: 'This room holds everything from Bruce Springsteen trivia, to ghost stories, to recipes from my grandma, to unpaid parking tickets, to.',
       north: 'goats',
       east: 'chocolateCake'
     },
