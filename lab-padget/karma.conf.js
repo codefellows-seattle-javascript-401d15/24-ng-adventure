@@ -8,7 +8,7 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     files: [
-      'app/index.js',
+      'app/entry.js',
       'test/**/*-test.js',
     ],
 
@@ -17,7 +17,7 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      'app/index.js': ['webpack'],
+      'app/entry.js': ['webpack'],
       'test/**/*-test.js': ['webpack'],
     },
 
@@ -33,7 +33,7 @@ module.exports = function(config) {
 
     autoWatch: false,
     browsers: ['Chrome'],
-    singleRun: false,
+    singleRun: true,
     concurrency: Infinity,
   });
 };
