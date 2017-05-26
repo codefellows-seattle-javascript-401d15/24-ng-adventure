@@ -1,11 +1,11 @@
 'use strict'
 
 const HTMLPlugin = require('html-webpack-plugin')
-const ExtractPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const plugins = [
-  new HTMLPlugin({template: `${__dirname}/app/index.html`}),
-  new ExtractPlugin('bundle.css')
+  new HTMLPlugin({ template: `${__dirname}/app/index.html` }),
+  new ExtractTextPlugin('bundle.css')
 ]
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node-modules/,
+        exclude: /node_modules/,
         use: 'babel-loader'
       },
       {
@@ -33,18 +33,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractPlugin(
+        use: ExtractTextPlugin.extract(
           {
             use: [
               {
                 loader: 'css-loader',
-                options: {sourceMap: true}
+                options: { sourceMap: true }
               },
               {
                 loader: 'sass-loader',
                 options: {
                   sourceMap: true,
-                  includePaths:[`${__dirname}/app/scss`]
+                  includePaths: [`${__dirname}/app/scss/`]
                 }
               }
             ]
