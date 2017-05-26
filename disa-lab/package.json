@@ -5,6 +5,7 @@
   "main": "entry.js",
   "scripts": {
     "watch": "webpack-dev-server --inline --hot",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
