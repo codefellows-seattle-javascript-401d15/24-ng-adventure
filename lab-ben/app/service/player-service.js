@@ -10,7 +10,7 @@ require('angular')
   let player = service.player = {
     name: 'Jeff',
     location: 'cell',
-    hp: 10,
+    hp: 1,
   };
 
   let history = service.history = [

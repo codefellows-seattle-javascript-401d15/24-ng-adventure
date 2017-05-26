@@ -47,6 +47,10 @@ require('angular')
     },
     freedom: {
       desc: 'You managed to escape your prison.',
+      north: 'freedom',
+      south: 'freedom',
+      west: 'freedom',
+      east: 'freedom',
     },
   };
 
