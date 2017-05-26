@@ -8,38 +8,38 @@ require('angular')
   let service = {};
 
   service.mapData = {
-    cabin: {
-      desc: 'message from cabin',
-      south: 'trail'
+    futureMeals: {
+      desc: 'Future Meals: this is where Abs thinks about all of her future meals, so that she has something to live for.',
+      south: 'realityTvFueds'
     },
-    trail: {
-      desc: 'message from trail',
-      north: 'cabin',
-      east: 'gate',
-      south: 'pit'
+    realityTvFueds: {
+      desc: 'Reality TV: here\'s where she keeps info of all the Dance Moms, KKTK, and ANTM fueds!!',
+      north: 'futureMeals',
+      east: 'childhoodTraumas',
+      south: 'codeFellowsResubmits'
     },
-    pit: {
-      desc: 'welcome to the pit',
-      north: 'trail'
+    codeFellowsResubmits: {
+      desc: 'Code Fellows: this room is very large bc it\'s where Abs keeps of the broken code and unfinished resubmits she\'s currently supressing',
+      north: 'realityTvFueds'
     },
-    gate: {
-      desc: 'message from the gate',
-      west: 'trail',
-      east: 'castle'
+    childhoodTraumas: {
+      desc: 'Childhood Traumas: Whoops! Wrong turn! We\'re just going to get out of here ASAP!',
+      west: 'realityTVFueds',
+      east: 'goats'
     },
-    castle: {
-      desc: 'message from the castle',
-      west: 'gate',
-      south: 'corridor'
+    goats: {
+      desc: 'Goats: goat memes live here',
+      west: 'childhoodTraumas',
+      south: 'unpaidParkingTickets'
     },
-    corridor: {
-      desc: 'welcome to the cor',
-      north: 'castle',
-      east: 'snackroom'
+    unpaidParkingTickets: {
+      desc: 'This room holds everything from Bruce Springsteen trivia, to ghost stories, to recipes from my grandma, to unpaid parking tickets.',
+      north: 'goats',
+      east: 'chocolateCake'
     },
-    snackroom: {
-      desc: 'welcome to the snackroom',
-      west: 'corridor'
+    chocolateCake: {
+      desc: 'bc in the end it all leads back to food!',
+      west: 'unpaidParkingTickets'
     }
   }
   return service;

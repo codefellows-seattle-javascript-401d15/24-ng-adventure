@@ -9,15 +9,15 @@ require('angular')
   let turn = 0;
   let player = service.player = {
     name: 'Goat',
-    location: 'cabin',
-    hp: 5
+    location: 'futureMeals',
+    hp: 5,
   }
 
   let history = service.history = [
     {
       turn,
       desc: 'Welcome to Abs\' Brain',
-      location: 'cabin',
+      location: 'futureMeals',
       hp: player.hp
     }
   ]
@@ -36,7 +36,7 @@ require('angular')
           location: player.location,
           hp: --player.hp
         })
-        return reject('no room in that direction')
+        return reject('You\'ve hit the limits of Abs\' psyche')
       }
 
       history.unshift({
