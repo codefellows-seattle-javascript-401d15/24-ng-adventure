@@ -1,0 +1,11 @@
+<section>
+  <h2 ng-if="!historyCtrl.playerService.player.hp"> {{ historyCtrl.playerService.gameOverMessage }} </h2>
+  <ul ng-if="historyCtrl.playerService.player.hp">
+    <h2>{{ historyCtrl.playerService.player.name }}'s journey</h2>
+    <li ng-repeat="turn in historyCtrl.playerService.history track by $index">
+      <h5>turn: {{ turn.turn }}</h5>
+      <h5>location: {{ turn.location }}</h5>
+      <h5><em> {{ turn.desc }} </em></h5>
+    </li>
+  </ul>
+</section>
