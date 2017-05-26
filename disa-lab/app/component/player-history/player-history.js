@@ -1,4 +1,4 @@
-'use strict'
+'use strict'//not accurate code. copied from player-info.
 
 require('./_history.scss')
 
