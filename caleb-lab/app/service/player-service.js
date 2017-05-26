@@ -8,7 +8,7 @@ require('angular')
   let service = {}
   let turn = 0
   let player = service.player = {
-    name: 'Allie',
+    name: 'Shade',
     location: 'Pit',
     previousLocation: null,
     directionMoved: null,

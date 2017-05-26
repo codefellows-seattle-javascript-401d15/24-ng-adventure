@@ -15,6 +15,7 @@ require('angular')
     Courtyard: {
       desc: 'You stumble into a ruined courtyard, there is a trail ahead, and a gate to your right.',
       east: 'Trail',
+      west: 'Pit',
       south: 'Graveyard'
     },
     Graveyard: {
@@ -42,7 +43,7 @@ require('angular')
     },
     Castle: {
       desc: 'You finally see signs of life after walking for hours through the mean forest trail. Smell the stink of humans living in their *cities*. You slink to the Castle in the center of the human cesspool, careful to be unseen.',
-      west: 'Trail',
+      west: 'Trail'
     },
     Hall: {
       desc: 'You scale the walls of the castle, careful to pull yourself to the top after the sentry passes on his rounds. You sneak into the inner halls of the castle, reaching the Great Hall - nearly to your mark.',
@@ -52,7 +53,7 @@ require('angular')
     Antechamber: {
       desc: 'You pass into the Antechamber to the throne room, checking all directions for the knights of the king\'s table before proceeding. You can choose to poison his food in the kitchens to the right, or lie in wait in the throne room itself.',
       north: 'ThroneRoom',
-      east: 'Kitchens',
+      east: 'Kitchens'
     },
     Kitchens: {
       desc: 'You scowl at the stench of humans as you near the kitchens. You can sneak to the king\'s food and poison it, or just steal some of the food.',
