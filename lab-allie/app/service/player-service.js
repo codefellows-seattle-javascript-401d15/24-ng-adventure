@@ -33,10 +33,12 @@ require('angular')
       let newLocation = mapService.mapData[current][direction];
       
       if(!newLocation) {
+        history.shift();
         history.unshift({
           turn, 
           description: 'You cannot move in that direction',
           location: player.location,
+          previousLocation: history[0].location,
           points: --player.points,
         });
         return reject('You cannot move in that direction');
@@ -44,10 +46,13 @@ require('angular')
       
       history.unshift({
         turn,
-        location: player.location,
+        location: newLocation,
+        previousLocation: current,
         decription: mapService.mapData[newLocation].description,
         points: ++player.points,
       });
+      
+      console.log('history', history);
       
       player.location = newLocation;
       return resolve(player.location);

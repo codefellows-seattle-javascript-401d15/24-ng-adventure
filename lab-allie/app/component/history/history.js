@@ -7,9 +7,11 @@ require('angular')
 .component('history', {
   template: require('./history.html'),
   controllerAs: 'historyCtrl',
-  controller: ['$log', 'history', function($log, playerService) {
+  controller: ['$log', 'playerService', function($log, playerService) {
     $log.debug('#player-info controller');
     
     this.history = playerService.history;
+    $log.log('player history', this.history);
+
   }],
 });
