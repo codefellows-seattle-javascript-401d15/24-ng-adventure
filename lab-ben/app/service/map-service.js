@@ -17,6 +17,14 @@ require('angular')
       south: 'cell',
       north: 'dungeonStairs',
       east: 'wardenOffice',
+      west: 'endlessHallway',
+    },
+    endlessHallway: {
+      desc: 'is there an end?',
+      west: 'endlessHallway',
+      north: 'endlessHallway',
+      south: 'endlessHallway',
+      east: 'dungeon',
     },
     dungeonStairs: {
       desc: 'Dark and Smelly',

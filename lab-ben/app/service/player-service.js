@@ -16,8 +16,8 @@ require('angular')
   let history = service.history = [
     {
       turn,
-      desc: 'Beginning of the Adventure',
-      location: 'void',
+      desc: mapService.mapData[player.location].desc,
+      location: player.location,
       hp: player.hp,
     },
   ];
@@ -28,7 +28,7 @@ require('angular')
 
       let current = player.location;
       let newLocation = mapService.mapData[current][direction];
-      
+
       if(!newLocation) {
         history.unshift({
           turn,
@@ -40,8 +40,8 @@ require('angular')
 
       history.unshift({
         turn,
-        location: current,
-        desc: mapService.mapData[current].desc,
+        location: newLocation,
+        desc: mapService.mapData[newLocation].desc,
       });
 
       player.location = newLocation;

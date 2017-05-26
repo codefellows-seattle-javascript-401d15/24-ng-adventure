@@ -1,5 +1,5 @@
 <section>
-  <h2>Last turn</h2>
+  <h2>This turn</h2>
   <ul>
     <li>
       <span>turn: </span>
@@ -16,6 +16,25 @@
     <li>
       <span>hp: </span>
       <span>{{ HistoryCtrl.history[0].hp }}</span>
+    </li>
+  </ul>
+  <h2>Last turn</h2>
+  <ul>
+    <li>
+      <span>turn: </span>
+      <span>{{ HistoryCtrl.history[1].turn }}</span>
+    </li>
+    <li>
+      <span>location: </span>
+      <span>{{ HistoryCtrl.history[1].location }}</span>
+    </li>
+    <li>
+      <span>description: </span>
+      <span>{{ HistoryCtrl.history[1].desc }}</span>
+    </li>
+    <li>
+      <span>hp: </span>
+      <span>{{ HistoryCtrl.history[1].hp }}</span>
     </li>
   </ul>
 </section>
