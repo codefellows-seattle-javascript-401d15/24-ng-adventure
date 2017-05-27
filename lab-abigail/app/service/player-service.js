@@ -16,7 +16,7 @@ require('angular')
   let history = service.history = [
     {
       turn,
-      desc: 'Welcome to Abs\' Brain',
+      desc: 'Future Meals: this is where Abs thinks about all of her future meals, so that she has something to live for.',
       location: 'futureMeals',
       hp: player.hp
     }
