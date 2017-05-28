@@ -10,7 +10,7 @@ require('angular')
   controller: ['$log', 'playerService', function($log, playerService) {
     $log.debug('#gamePadCtrl');
 
-    this.directions = ['north', 'south', 'east', 'west'];
+    this.directions = ['north', 'east', 'south', 'west'];
     this.moveDirection = this.directions[0];
 
     this.movePlayer = function() {
