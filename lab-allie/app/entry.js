@@ -1,8 +1,8 @@
 'use strict';
 
-// require('./scss/main.scss');
-
 require('angular').module('ngAdventure', []);
+
+// require('./scss/main.scss');
 
 require('./service/map-service');
 require('./service/player-service');

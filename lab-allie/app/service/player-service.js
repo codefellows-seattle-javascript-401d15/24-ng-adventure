@@ -30,9 +30,7 @@ require('angular')
       turn++;
       
       let current = player.location;
-      
-      // let roomDescription = player.description;
-      
+
       let newLocation = mapService.mapData[current][direction];
       
       if(!newLocation) {
@@ -51,7 +49,6 @@ require('angular')
         turn,
         location: newLocation,
         previousLocation: current,
-        // description: roomDescription,
         description: mapService.mapData[newLocation].description,
         points: ++player.points,
       });
