@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "watch": "webpack-dev-server --inline --hot",
+    "build": "webpack",
+  },
   "dependencies": {
     "angular": "^1.6.4",
     "babel-core": "^6.24.1",
@@ -22,9 +26,6 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^2.4.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
