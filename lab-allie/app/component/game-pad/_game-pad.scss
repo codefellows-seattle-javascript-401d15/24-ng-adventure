@@ -1,0 +1,35 @@
+// ** VARS ** //
+$brand-background: #FF5D73;
+$brand-links-hover: #FC9D9A;
+
+// ** MIXINS ** //
+@mixin button {
+  border-radius: .3em;
+  background-color: $brand-links-hover;
+  padding: 1.5%;
+  &:hover {
+    background-color: $brand-background;
+    color: white;
+  }
+}
+
+@mixin field {
+  border-radius: .7em;
+  border-color: $brand-links-hover;
+}
+
+// ** BASE STYLES ** //
+game-pad {
+  background-color: #brand-background;
+  font-family: Arial;
+  color: 494949;
+  padding: 3%;
+}
+
+button {
+  @include button;
+}
+
+input {
+  @include field;
+}

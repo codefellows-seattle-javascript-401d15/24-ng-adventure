@@ -1,0 +1,19 @@
+// ** VARS ** //
+$brand-secondary: #494949;
+$brand-background: #FF5D73;
+
+// ** MIXINS ** //
+@mixin font {
+  font-family: impact;
+  color: $brand-secondary;
+}
+
+// ** BASE STYLES ** //
+player-info {
+  @include font;
+  padding: 3%;
+}
+
+.stats {
+  color: $brand-secondary;
+}
