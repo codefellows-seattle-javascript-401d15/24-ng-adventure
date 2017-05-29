@@ -1,6 +1,6 @@
 'use strict';
 
-// require('./_player-info.scss');
+require('./_player-info.scss');
 
 require('angular')
 .module('ngAdventure')
@@ -8,8 +8,11 @@ require('angular')
   template: require('./player-info.html'),
   controllerAs: 'playerInfoCtrl',
   controller: ['$log', 'playerService', function($log, playerService) {
-    $log.debug('#player-info controller');
-    
-    this.player = playerService.player;
+    this.$onInit = () => {
+      $log.debug('#player-info controller');
+      
+      this.player = playerService.player;
+    };
   }],
+  
 });

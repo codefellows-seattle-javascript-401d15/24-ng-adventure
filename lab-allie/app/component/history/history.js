@@ -1,6 +1,6 @@
 'use strict';
 
-// require('./_history.scss');
+require('./_history.scss');
 
 require('angular')
 .module('ngAdventure')
@@ -8,10 +8,11 @@ require('angular')
   template: require('./history.html'),
   controllerAs: 'historyCtrl',
   controller: ['$log', 'playerService', function($log, playerService) {
-    $log.debug('#player-info controller');
-    
-    this.history = playerService.history;
+    this.$onInit = () => {
 
-    // this.errorMessage = this.history[this.history.length - 1].description;
+      $log.debug('#player-info controller');
+      
+      this.history = playerService.history;
+    };
   }],
 });
