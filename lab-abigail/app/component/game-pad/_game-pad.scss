@@ -20,6 +20,12 @@ button {
 select {
   font-family: $font-fam-history;
   font-size: 1.5vw;
+  &:visited {
+    color: red;
+  }
+  &:active {
+    color: red;
+  }
 }
 
 option {
