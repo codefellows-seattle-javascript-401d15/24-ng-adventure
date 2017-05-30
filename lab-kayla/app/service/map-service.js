@@ -9,27 +9,43 @@ require('angular')
 
   service.mapData = {
     cabin: {
-      desc: 'message from cabin'
+      desc: 'message from cabin',
       south: 'trail'
     },
     trail: {
-      desc:
-      north:
-      east:
-      south:
+      desc: 'message from the trail',
+      north: 'cabin',
+      east: 'gate',
+      south: 'pit'
     },
     pit: {
-      desc:
-      north:
+      desc: 'you are in a pit',
+      north: 'trail'
     },
     gate: {
-      desc:
-      west:
-      east:
+      desc: 'you have reached the gate',
+      west: 'trail',
+      east: 'castle'
     },
     castle: {
-      desc:
-      north:
+      desc: 'Welcome to the castle',
+      west: 'gate',
+      south: 'corridor'
+    },
+    corridor: {
+      desc: 'you are in the corridor',
+      north: 'castle',
+      east: 'great hall'
+    },
+    great hall: {
+      desc: 'you have walked into the great hall',
+      west: 'corridor',
+      north: 'treasure room'
+    }
+    treasure room: {
+      desc: 'You have reached the room of treasures',
+      south: 'great hall'
     }
   }
+  return service
 }])
