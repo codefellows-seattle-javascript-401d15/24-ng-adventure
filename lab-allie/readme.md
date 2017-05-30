@@ -52,4 +52,4 @@ Use the command `npm i` in the terminal to install all dependencies used in this
 * karma-webpack
 
 #### Testing 
-Use the command `npm run test` to run the tests written on this app. There are currently #### tests passing with a total of #### expect statements.
+Use the command `npm run test` to run the tests written on this app. There are currently 4 tests passing with a total of 43 expect statements.
