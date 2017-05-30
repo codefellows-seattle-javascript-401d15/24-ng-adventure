@@ -8,7 +8,7 @@ require('angular')
   let turn = 0
   let player = service.player = {
     name: 'Guadelupe',
-    location: 'cabin',  //change cabin possibly
+    location: 'cabin',
     hp: 2
   }
 
