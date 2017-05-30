@@ -8,9 +8,10 @@ describe('Testing the ngAdventure game', function () {
   describe('Testing the gamepad controller component', () => {
     beforeEach(() => {
       angular.mock.module('ngAdventure');
-      angular.mock.inject(($rootScope, $componentController) => {
+      angular.mock.inject(($rootScope, $componentController, playerService) => {
         this.$rootScope = $rootScope;
         this.gamepadCtrl = new $componentController('gamePad');
+        this.gamepadCtrl.playerService = playerService;
         this.gamepadCtrl.$onInit();
       });
     });
@@ -37,10 +38,26 @@ describe('Testing the ngAdventure game', function () {
       expect(this.gamepadCtrl.directions[3]).toEqual(jasmine.any(String));
     });
     
-    // fit('should move the player', () => {
-    //   this.gamepadCtrl.movePlayer(this.down);
-    //   expect(true).toBe(true);
-    // });
+    it('should move the player', () => {
+      this.gamepadCtrl.moveDirection = 'down';
+      this.gamepadCtrl.movePlayer();
+      expect(this.gamepadCtrl.playerService.player.name).toEqual('Player 1');
+      expect(this.gamepadCtrl.playerService.player.location).toEqual('courtyard');
+      expect(this.gamepadCtrl.playerService.player.points).toEqual(101);
+      
+      expect(this.gamepadCtrl.playerService.history[0].turn).toEqual(1);
+      expect(this.gamepadCtrl.playerService.history[0].location).toEqual('courtyard');
+      expect(this.gamepadCtrl.playerService.history[0].location).not.toEqual('garden');
+      expect(this.gamepadCtrl.playerService.history[0].previousLocation).toEqual('garden');
+      expect(this.gamepadCtrl.playerService.history[0].description).toEqual('You are in the Courtyard');
+      expect(this.gamepadCtrl.playerService.history[0].points).toEqual(101);
+      
+      expect(this.gamepadCtrl.playerService.history[1].turn).toEqual(0);
+      expect(this.gamepadCtrl.playerService.history[1].location).toEqual('Garden');
+      expect(this.gamepadCtrl.playerService.history[1].previousLocation).not.toEqual('garden');
+      expect(this.gamepadCtrl.playerService.history[1].description).toEqual('Welcome to ngAdventure!');
+      expect(this.gamepadCtrl.playerService.history[1].points).toEqual(100);
+    });
   });
   
   describe('Testing the history controller component', () => {
