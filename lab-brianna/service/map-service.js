@@ -8,22 +8,23 @@ require('angular')
   let service = {};
 
   service.mapData = {
-    cabin: {
-      desc: 'message from cabin',
-      south: 'trail'
+    Portree: {
+      desc: 'Welcome to Portree.',
+      south: 'Riverbroke'
     },
-    trail: {
-      desc: 'message from trail',
-      north: 'cabin',
-      east: 'gate',
-      south: 'pit'
+    Riverbroke: {
+      desc: 'Grab a drink of fresh spring water but beware of the goblins.',
+      north: 'Portree',
+      east: 'Black Cullins',
+      south: 'Bridge-To',
+      west: 'Faerie Glen'
     },
-    pit: {
-      desc: 'welcome to the pit',
-      north: 'trail'
+    'Faerie Glen': {
+      desc: 'Welcome to Faerie Glen where the witches and faeries reside in the hillsides of Mount Moar',
+      east: 'Riverbroke'
     },
-    gate: {
-      desc: 'message from the gate',
+    'Black Cullins': {
+      desc: '',
       west: 'trail',
       east: 'castle'
     },
@@ -37,7 +38,7 @@ require('angular')
       north: 'castle',
       east: 'snackroom'
     },
-    snackroom: {
+    snackroom : {
       desc: 'welcome to the snackroom',
       west: 'corridor'
     }
