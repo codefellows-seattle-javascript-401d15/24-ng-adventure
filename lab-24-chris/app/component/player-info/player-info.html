@@ -1,0 +1,36 @@
+<section>
+  <h2>Current status:</h2>
+  <ul>
+    <label>
+      <h4><span>{{ playerInfoCtrl.player.desc }}</span></h4>
+    </label>
+    <li>
+      <span>name:</span>
+      <span>{{ playerInfoCtrl.player.name }}</span>
+    </li>
+    <li>
+      <span>hp:</span>
+      <span>{{ playerInfoCtrl.player.hp }}</span>
+    </li>
+    <li>
+      <span>location:</span>
+      <span>{{ playerInfoCtrl.player.location }}</span>
+    </li>
+  </ul>
+</section>
+<section ng-repeat="index in playerInfoCtrl.history track by $index" ng-show="!$last">
+  <h2>History {{ playerInfoCtrl.history[$index].turn }}</h2>
+  <ul>
+    <label>
+      <h4><span>{{ playerInfoCtrl.history[$index + 1].desc }}</span></h4>
+    </label>
+    <li>
+      <span>hp:</span>
+      <span>{{ playerInfoCtrl.history[$index].hp }}</span>
+    </li>
+    <li>
+      <span>location:</span>
+      <span>{{ playerInfoCtrl.history[$index].location }}</span>
+    </li>
+  </ul>
+</section>
