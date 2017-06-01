@@ -1,0 +1,9 @@
+<section>
+  <form name="gamepad" novalidate>
+    <label for="direction">Travel to the</label>
+    <select ng-model="gamepadCtrl.moveDirection">
+      <option ng-repeat="direction in gamepadCtrl.direction" value="{{ direction }}">{{direction}}</option>
+    </select>
+    <button type="button" ng-click="gamepadCtrl.movePlayer()">Move Player</button>
+  </form>
+</section>
