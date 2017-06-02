@@ -1,10 +1,13 @@
 <section>
   <h2>History</h2>
+  <button type="button" name="openHistory" ng-click="historyCtrl.openHistory()">Open History</button>
+  <button type="button" name="closeHistory" ng-click="historyCtrl.closeHistory()">Close History</button>
   <ul>
-    <li>
-      <span></span>
-
+    <li ng-repeat="history in historyCtrl.history">
+  <h4>Turn: <span>{{history.turn}}</span></h4>
+  <p> Location: {{history.location}}</p>
+  <p> Health: {{history.hp}}</p>
     </li>
-  </ul>
-  <button type="submit" name="history" toggle="true" ng-click="">See History</button>
+
+</ul>
 </section>

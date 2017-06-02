@@ -10,7 +10,7 @@ require('angular')
 
   let history = service.history = [
     {
-      turn,
+      turn: 'Start',
       desc:'Welcome to the Angular Adventure!',
       location: 'Cabin',
       hp: 5,
@@ -23,15 +23,17 @@ require('angular')
 
       if(!newLocation){
 
-        history.push({
+        history.unshift({
           turn,
+          location: player.location,
           desc: `Duuur. you ran into a wall while at the ${player.location}`,
           hp: --player.hp,
         });
         return reject('Wrong way!');
       }
-      history.push({
+      history.unshift({
         turn,
+        location: newLocation,
         desc: mapService.mapData[newLocation].desc,
         hp: ++player.hp,
       });
