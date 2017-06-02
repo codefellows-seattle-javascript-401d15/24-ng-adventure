@@ -1,0 +1,51 @@
+@import '../component/game-pad/_game-pad.scss';
+@import '../component/history/_history.scss';
+@import '../component/player-info/_player-info.scss';
+
+// ** VARS ** //
+$brand-primary: #7C7A7A;
+$brand-background: #FF5D73;
+$brand-links-hover: #FC9D9A;
+$heading-color: white;
+$brand-main-font: Helvetica;
+$brand-secondary-font: "Copperplate";
+$padding: 3%;
+$margin-left: 30%;
+
+// ** BASE STYLES ** //
+body {
+  background-color: $brand-primary;
+}
+
+a {
+  color: $brand-background;
+  &:hover {
+    color: $brand-links-hover;
+  }
+}
+
+h1 {
+  font-size: 3vw;
+  color: $heading-color;
+  font-family: $brand-secondary-font;
+}
+
+h2 {
+  font-size: 3vw;
+  color: $heading-color;
+}
+
+.container {
+  margin-top: 5%;
+  font-size: 3vw;
+  margin-left: $margin-left;
+  font-family: $brand-main-font;
+}
+
+.links {
+  padding: $padding;
+  text-align: center;
+  font-family: $brand-secondary-font;
+  display: inline;
+  font-size: 1.3em;
+}

@@ -1,0 +1,18 @@
+<section>
+  <h2>Player History</h2>
+  <ul>
+    <li>
+      <span>Previous Room:</span>
+      <span>{{ historyCtrl.history[0].location }}</span>
+    </li>
+    <li class="turns">
+      <span>Turns:</span>
+      <span>{{ historyCtrl.history[0].turn }}</span>
+    </li>
+    <li>
+      <!-- need to add ng-if logic to li to display message only when promise fails -->
+      <span>Message:</span>
+      <span>{{ historyCtrl.history[0].description }}</span>
+    </li>
+  </ul>
+</section>
