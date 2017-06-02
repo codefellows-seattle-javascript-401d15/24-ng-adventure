@@ -2,51 +2,45 @@
 
 require('angular')
 .module('ngAdventure')
-.factory('playerService', ['$q', '$log', 'mapService', function($q, $log, mapService){
+.factory('playerService', ['$q', '$log', 'historyService', 'mapService', function($q, $log, historyService, mapService){
   $log.debug('#playerService');
 
   let service = {};
-  let turn = 0;
   let player = service.player = {
+    desc: 'Welcome to the Angular Adventure',
     name: 'Mike',
     location: 'Cabin',
     hp: 5,
+    snackroomVisit: false,
   };
-
-  let history = service.history = [
-    {
-      turn,
-      desc:'Welcome to the Angulare Adventure!',
-      location: 'Cabin',
-      hp: player.hp,
-    },
-  ];
 
   service.movePlayer = function(direction){
     return new $q((resolve, reject) => {
 
-      turn++;
-
       let current = player.location;
       let newLocation = mapService.mapData[current][direction];
-      console.log(newLocation);
+
+      historyService.history.trackHistory(newLocation, player, direction)
+      .then( data =>{
+        console.log(data);
+      })
+      .catch(err => err);
+
       if(!newLocation){
-        history.unshift({
-          turn,
-          desc: 'Sorry, you can not go that way',
-          location: player.location,
-          hp: player.hp--,
-        });
-        return reject('Nothing is over that way');
+        player.desc = 'Wrong Way!!';
+        return reject(`Player tried to go ${direction}`);
       }
 
-      history.unshift({
-        turn,
-        location: player.location,
-        desc: mapService.mapData[newLocation].desc,
-      });
+      if(newLocation === 'Snackroom' && player.snackroomVisit === false){
+        let name = player.name;
+        player.snackroomVisit = true;
+        player.name = `Fatty ${name}`;
+      }
+
+
 
       player.location = newLocation;
+      player.desc = mapService.mapData[player.location].desc;
       return resolve(player.location);
     });
   };

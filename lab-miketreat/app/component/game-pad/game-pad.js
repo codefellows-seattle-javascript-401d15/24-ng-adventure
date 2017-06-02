@@ -10,7 +10,8 @@ require('angular')
   controller: ['$log','playerService', function($log, playerService){
     $log.debug('#gamepadCtrl');
 
-    this.direction = ['North', 'South', 'East', 'West'];
+
+    this.direction = ['North', 'East', 'West', 'South'];
     this.moveDirection = this.direction[0];
 
     this.movePlayer = function() {
@@ -18,7 +19,7 @@ require('angular')
       .then(location =>{
         $log.log(`player currently at: ${location}`);
       })
-      .catch($log.error);
+      .catch($log.log);
     };
   }],
 });
