@@ -39,12 +39,12 @@ module.exports = {
               {
                 loader: 'css-loader',
                 options: {sourceMap: true}
-              }
+              },
               {
                 loader: 'sass-loader',
                 options: {
                   sourceMap: true,
-                  includePaths: [`${__dirname}/app/scss`]
+                  includePaths: [`${__dirname}/app/scss/`]
                 }
               }
             ]

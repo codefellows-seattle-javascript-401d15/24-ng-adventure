@@ -37,12 +37,12 @@ require('angular')
       north: 'castle',
       east: 'great hall'
     },
-    great hall: {
+    great_hall: {
       desc: 'you have walked into the great hall',
       west: 'corridor',
       north: 'treasure room'
-    }
-    treasure room: {
+    },
+    treasure_room: {
       desc: 'You have reached the room of treasures',
       south: 'great hall'
     }
