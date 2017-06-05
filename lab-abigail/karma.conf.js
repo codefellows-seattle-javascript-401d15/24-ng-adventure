@@ -1,0 +1,30 @@
+'use strict';
+
+const webpack = require('./webpack.config.js');
+delete webpack.entry;
+
+module.exports = function(config) {
+  config.set({
+    webpack,
+    basePath: '',
+    frameworks: ['jasmine'],
+    files: [
+      'app/entry.js',
+      'app/test/ngadventure-test.js',
+    ],
+    exclude: [
+    ],
+    preprocessors: {
+      'app/entry.js': ['webpack'],
+      'app/test/ngadventure-test.js': ['webpack'],
+    },
+    reporters: ['progress'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_DEBUG,
+    autoWatch: false,
+    browsers: ['Chrome'],
+    singleRun: false,
+    concurrency: Infinity,
+  });
+};

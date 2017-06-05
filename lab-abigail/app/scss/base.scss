@@ -1,0 +1,51 @@
+// $vars
+
+$brand-primary: #444;
+$btn-primary: $brand-primary / 2;
+$btn-hover: #31b1c1;
+$black: #000;
+$white: #fff;
+$box-std: 10%;
+$gutter-std: 5%;
+$gutter-sm: $gutter-std / 2;
+$font-fam: 'Barrio';
+$background-color: #EEEE00;
+
+// $mixins
+
+@mixin margin {
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+// global styles
+
+body {
+  font-family: $font-fam;
+  font-size: 2vw;
+  background: $background-color;
+  text-align: left;
+  @include margin
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+h2 {
+  font-size: 3vw;
+  margin-top: $gutter-std;
+}
+
+
+input[type="text"] {
+  float: left;
+  width: $box-std + 10%;
+  margin-right: $gutter-std / 2;
+  padding: 2%;
+  font-family: $font-fam;
+  border: none;
+  border-radius: 3px;
+}
