@@ -1,0 +1,21 @@
+@import '../../scss/theme/theme';
+
+.playerinfo {
+  width: 20%;
+  float: left;
+  margin-left: 2%;
+  padding: $gutter-sm;
+
+  h2 {
+    border-bottom: solid 2px $brand-secondary;
+  }
+
+  ul {
+    padding: $gutter-sm;
+
+    li {
+      padding-bottom: .7em;
+    }
+
+  }
+}
