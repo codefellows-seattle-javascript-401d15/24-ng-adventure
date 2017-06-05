@@ -29,14 +29,17 @@ require('angular')
       turn ++
       let currentLocation = player.location
       let newLocation = mapService.mapData[currentLocation][direction]
-
       if(!newLocation){
-        history.shift()
         history.unshift({
           turn,
           desc: 'You have run into a dead end',
           location: currentLocation,
-          previousLocation: history[0].location,
+          previousLocation: (function(){
+            if(history[0].location) history[0].location
+            else if(!history[0].location){
+              'there is nothing behind'
+            }
+          })(),
           directionMoved: direction,
           hp: --player.hp
         })
