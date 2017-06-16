@@ -1,22 +1,8 @@
 {
   "name": "24-ng-adventure",
   "version": "1.0.0",
-  "description": "![cf](https://i.imgur.com/7v5ASc8.png) Lab 29 - ngAdventure ======",
-  "main": "index.js",
-  "scripts": {
-    "watch": "webpack-dev-server --inline --hot",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ScottBrenden/24-ng-adventure.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ScottBrenden/24-ng-adventure/issues"
-  },
-  "homepage": "https://github.com/ScottBrenden/24-ng-adventure#readme",
+  "description": "",
+  "main": "entry.js",
   "dependencies": {
     "angular": "^1.6.4",
     "babel-core": "^6.24.1",
@@ -32,7 +18,8 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "devDependencies": {
     "angular-mocks": "^1.6.4",
@@ -41,7 +28,14 @@
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-jasmine": "^1.1.0",
-    "karma-webpack": "^2.0.3",
-    "webpack-dev-server": "^2.4.5"
-  }
+    "karma-webpack": "^2.0.3"
+  },
+  "scripts": {
+    "test": "karma start --single-run",
+    "build-watch": "webpack-dev-server --inline --hot",
+    "lint": "eslint",
+    "test-watch": "karma start"
+  },
+  "author": "Isak Swearingen",
+  "license": "MIT"
 }
