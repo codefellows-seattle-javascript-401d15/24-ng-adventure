@@ -1,0 +1,8 @@
+<section>
+  <h2> History </h2>
+    <div ng-repeat="turn in historyCtrl.playerService.history track by $index">
+     Location Description : {{ historyCtrl.player.location }} " {{ turn.desc }} "
+     <br>
+     Turn : {{ turn.turn }}
+    </div>
+</section>
