@@ -4,6 +4,7 @@
   "description": "![cf](https://i.imgur.com/7v5ASc8.png) Lab 29 - ngAdventure ======",
   "main": "entry.js",
   "scripts": {
+    "test": "karma start",
     "watch": "webpack-dev-server --inline --hot",
     "build": "webpack"
   },

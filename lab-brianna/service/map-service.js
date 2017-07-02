@@ -24,23 +24,23 @@ require('angular')
       east: 'Riverbroke'
     },
     'Black Cullins': {
-      desc: '',
-      west: 'trail',
-      east: 'castle'
+      desc: 'The dark mountains of Skye, dread carefully',
+      west: 'Riverbroke',
+      east: 'Fairy Pools'
     },
-    castle: {
-      desc: 'message from the castle',
-      west: 'gate',
-      south: 'corridor'
+    'Fairy Pools': {
+      desc: 'A safe haven away from the dark mountains, enjoy the pools of the Fairies.',
+      west: 'Black Cullins',
+      south: 'Dunvegan Castle'
     },
-    corridor: {
-      desc: 'welcome to the cor',
-      north: 'castle',
-      east: 'snackroom'
+    'Dunvegan Castle': {
+      desc: 'You\'ve arrived at the Clan of Dunvegan\'s castle',
+      north: 'Fairy Pools',
+      west: 'The Bridge-to-No-Where'
     },
-    snackroom : {
-      desc: 'welcome to the snackroom',
-      west: 'corridor'
+    'The Bridge-to-No-Where' : {
+      desc: 'It\'s the end of the road',
+      east: 'Dunvegan Castle'
     }
   };
   return service;
