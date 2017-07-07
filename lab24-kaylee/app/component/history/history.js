@@ -1,6 +1,6 @@
 'use strict'
 
-// require('./_history.scss')
+require('./_history.scss')
 
 require('angular')
 .module('ngAdventure')

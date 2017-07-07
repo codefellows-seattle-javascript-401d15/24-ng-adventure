@@ -1,6 +1,6 @@
 'use strict'
 
-// require('./_player-info.scss')
+require('./_player-info.scss')
 
 require('angular')
 .module('ngAdventure')
