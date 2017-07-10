@@ -8,7 +8,9 @@ require('angular')
   template: require('./player-info.html'),
   controllerAs: 'playerInfoCtrl',
   controller: ['$log', 'playerService', function($log, playerService) {
-    $log.debug('#playerInfoCtrl')
-    this.player = playerService.player
+    this.$onInit = () => {
+      $log.debug('#playerInfoCtrl')
+      this.player = playerService.player
+    }
   }]
 })

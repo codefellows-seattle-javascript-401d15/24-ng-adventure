@@ -8,7 +8,9 @@ require('angular')
   template: require('./history.html'),
   controllerAs: 'historyCtrl',
   controller: ['$log', 'playerService', function($log, playerService) {
-    $log.debug('#historyCtrl')
-    this.history = playerService.history
+    this.$onInit = () => {
+      $log.debug('#historyCtrl')
+      this.history = playerService.history
+    }
   }]
 })
