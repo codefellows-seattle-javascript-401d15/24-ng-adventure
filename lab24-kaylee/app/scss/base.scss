@@ -4,7 +4,6 @@
 
 //VARS
 $color-primary: #F5FFE6;
-$color-secondary: #C0B9FF;
 $color-background: #BAABAA;
 $font-size-primary: 30px;
 $padding: 5px;
@@ -24,8 +23,9 @@ h1 {
 }
 
 h2 {
-  color: $color-secondary;
   font-size: $font-size-primary;
   padding-left: $padding;
   font-family: cursive;
 }
+
+//SCSS question... I wanted 5 colors on my page: black, brown-ish, cream, yellow, and blue. Black, brown and creme are all a part of the base.scss file, but blue and yellow I wanted to add in the individual components' scss files. The player-info ul should be blue (which it is), but the history ul should be yellow (like the label in the gamepad component). How does SCSS "cascade"/determine which styles will be applied when dealing with a base styling file and individual component styling files?

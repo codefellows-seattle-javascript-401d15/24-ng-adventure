@@ -1,11 +1,11 @@
-// $color-primary: #F5FFE6;
-// $color-secondary: #BAABAA;
-// $font-size-primary: 20px;
-// $padding: 5px;
 
-// h2 {
-//   color: $color-primary;
-//   font-size: $font-size-primary;
-//   margin-bottom: $font-size-primary / 2;
-//   padding-left: $padding;
-// }
+$color-primary: #FFE53D;
+$font-size-primary: 20px;
+$padding: 5px;
+
+ li {
+  color: $color-primary;
+  font-size: $font-size-primary;
+  margin-bottom: $font-size-primary / 2;
+  list-style-type: none;
+}
