@@ -1,0 +1,10 @@
+$color-primary: #C0B9FF;
+$font-size-primary: 20px;
+$padding: 5px;
+
+ li {
+  color: $color-primary;
+  font-size: $font-size-primary;
+  margin-bottom: $font-size-primary / 2;
+  list-style-type: none;
+}
